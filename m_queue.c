@@ -24,7 +24,7 @@ int main()
 	char buff[SIZE];
 	int mq_ret,i,ret_rec;
 	int len;
-/*	struct mq_attr msg;
+	struct mq_attr msg;
 	msg.mq_flags = 0;
 	msg.mq_maxmsg = 2;
 	msg.mq_msgsize = 20;
@@ -35,7 +35,7 @@ int main()
 	} else {
 		printf("msg q is not created\n");
 	}
-	mq_snd_open = mq_open("/mymq",O_WRONLY);
+/*	mq_snd_open = mq_open("/mymq",O_WRONLY);
 	printf("Enter msg\n");
 	fgets(buff, SIZE,stdin);
 	len = strlen(buff);
@@ -44,8 +44,8 @@ int main()
 		printf("sent succesful\n");
 	} else {
 		printf("Sent unseccesful\n");
-	}*/
+	}
 	mq_rec_open = mq_open("/mymq",O_RDONLY);
 	ret_rec = mq_receive(mq_rec_open, buff, sizeof(buff), NULL);
-	printf("Message : %s\n", buff);
+	printf("Message : %s\n", buff);*/
 }
